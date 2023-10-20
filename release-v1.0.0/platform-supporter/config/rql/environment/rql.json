@@ -1,0 +1,60 @@
+{
+  "uniqueColumnsOf" : {
+    "environmentName" : true,
+    "projectId" : true
+  },
+  "queryScript" : [ ],
+  "columns" : {
+    "lastdeployedOn" : {
+      "type" : "date",
+      "validations" : {
+        "isAfterDate" : false,
+        "allowOnlyFutureDate" : "N",
+        "allowOnlyPastDate" : "N",
+        "isBeforeDate" : false,
+        "isMandatory" : false
+      }
+    },
+    "bgColor" : {
+      "type" : "string",
+      "validations" : {
+        "regex" : "^(rgba?((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?),s?(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?),s?(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?),s?(0?.d{1,2}|1(.0{1,2})?))|#([0-9a-fA-F]{3}|[0-9a-fA-F]{6}))$",
+        "minCharacters" : 0,
+        "maxCharacters" : 7,
+        "dataCategory" : "Color HEX, RGB/A",
+        "isUnique" : false,
+        "isMandatory" : true
+      }
+    },
+    "environmentName" : {
+      "type" : "string",
+      "validations" : {
+        "minCharacters" : 0,
+        "maxCharacters" : 255,
+        "isUnique" : false,
+        "isMandatory" : true
+      }
+    },
+    "description" : {
+      "type" : "string",
+      "validations" : { }
+    },
+    "projectId" : {
+      "type" : "string",
+      "validations" : { }
+    },
+    "envOrder" : {
+      "type" : "number",
+      "validations" : {
+        "minLength" : 0,
+        "maxLength" : 500,
+        "isMandatory" : true
+      }
+    }
+  },
+  "isApi" : false,
+  "entity" : "environment",
+  "saveScript" : [ ],
+  "referenceEntitiesOf" : { },
+  "apiScript" : [ ]
+}

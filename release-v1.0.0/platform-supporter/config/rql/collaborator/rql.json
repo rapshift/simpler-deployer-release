@@ -1,0 +1,36 @@
+{
+  "uniqueColumnsOf" : {
+    "userId" : true,
+    "projectId" : true
+  },
+  "queryScript" : [ ],
+  "columns" : {
+    "projectId" : {
+      "type" : "string",
+      "validations" : {
+        "regex" : "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+        "minCharacters" : 36,
+        "maxCharacters" : 36,
+        "dataCategory" : "UUID/GUID",
+        "isUnique" : false,
+        "isMandatory" : true
+      }
+    },
+    "userId" : {
+      "type" : "string",
+      "validations" : {
+        "regex" : "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+        "minCharacters" : 36,
+        "maxCharacters" : 36,
+        "dataCategory" : "UUID/GUID",
+        "isUnique" : false,
+        "isMandatory" : true
+      }
+    }
+  },
+  "isApi" : false,
+  "entity" : "collaborator",
+  "saveScript" : [ ],
+  "referenceEntitiesOf" : { },
+  "apiScript" : [ ]
+}

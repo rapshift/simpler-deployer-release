@@ -1,0 +1,109 @@
+{
+  "uniqueColumnsOf" : {
+    "fileName" : true,
+    "codeType" : true,
+    "entityId" : true,
+    "containerId" : true,
+    "projectId" : true
+  },
+  "queryScript" : [ {
+    "name" : "start",
+    "type" : "RStart",
+    "return" : "performQuery"
+  }, {
+    "name" : "performQuery",
+    "type" : "RDb.Query",
+    "input" : [ "$.request" ],
+    "return" : "end"
+  }, {
+    "name" : "end",
+    "type" : "REnd"
+  } ],
+  "columns" : {
+    "fileName" : {
+      "type" : "string",
+      "validations" : {
+        "minCharacters" : 0,
+        "maxCharacters" : 255,
+        "isUnique" : false,
+        "isMandatory" : true
+      }
+    },
+    "codeType" : {
+      "type" : "string",
+      "validations" : {
+        "minCharacters" : 0,
+        "maxCharacters" : 50,
+        "isUnique" : false,
+        "isMandatory" : true
+      }
+    },
+    "orderNum" : {
+      "type" : "number",
+      "validations" : {
+        "minLength" : 0,
+        "maxLength" : 50,
+        "isMandatory" : false
+      }
+    },
+    "entityId" : {
+      "type" : "string",
+      "validations" : {
+        "regex" : "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+        "minCharacters" : 36,
+        "maxCharacters" : 36,
+        "dataCategory" : "UUID/GUID",
+        "isUnique" : false,
+        "isMandatory" : true
+      }
+    },
+    "containerId" : {
+      "type" : "string",
+      "validations" : {
+        "regex" : "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+        "minCharacters" : 36,
+        "maxCharacters" : 36,
+        "dataCategory" : "UUID/GUID",
+        "isUnique" : false,
+        "isMandatory" : true
+      }
+    },
+    "projectId" : {
+      "type" : "string",
+      "validations" : {
+        "regex" : "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+        "minCharacters" : 36,
+        "maxCharacters" : 36,
+        "dataCategory" : "UUID/GUID",
+        "isUnique" : false,
+        "isMandatory" : true
+      }
+    },
+    "content" : {
+      "type" : "clob",
+      "validations" : {
+        "minCharacters" : 0,
+        "maxCharacters" : 500000,
+        "isUnique" : false,
+        "isMandatory" : true
+      }
+    }
+  },
+  "isApi" : false,
+  "entity" : "apiScript",
+  "saveScript" : [ {
+    "name" : "start",
+    "type" : "RStart",
+    "return" : "performSave"
+  }, {
+    "name" : "performSave",
+    "type" : "RDb.Save",
+    "input" : [ "$.request" ],
+    "return" : "end"
+  }, {
+    "name" : "end",
+    "type" : "REnd"
+  } ],
+  "referenceEntitiesOf" : { },
+  "apiScript" : [ ]
+}

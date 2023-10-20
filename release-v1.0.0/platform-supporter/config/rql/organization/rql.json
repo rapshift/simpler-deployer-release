@@ -1,0 +1,90 @@
+{
+  "uniqueColumnsOf" : {
+    "organizationName" : true
+  },
+  "queryScript" : [ ],
+  "columns" : {
+    "country" : {
+      "type" : "string",
+      "validations" : {
+        "minCharacters" : 0,
+        "maxCharacters" : 255,
+        "isUnique" : false,
+        "isMandatory" : true
+      }
+    },
+    "website" : {
+      "type" : "string",
+      "validations" : {
+        "regex" : "^(https?://)?([a-zA-Z0-9-]+.)+[a-zA-Z]{2,}(/S*)?$",
+        "minCharacters" : 0,
+        "maxCharacters" : 255,
+        "dataCategory" : "URL",
+        "isUnique" : false,
+        "isMandatory" : false
+      }
+    },
+    "emailAddress" : {
+      "type" : "string",
+      "validations" : {
+        "regex" : "^[w.-]+@[w.-]+.w+$",
+        "minCharacters" : 0,
+        "maxCharacters" : 255,
+        "dataCategory" : "Email Basic",
+        "isUnique" : false,
+        "isMandatory" : true
+      }
+    },
+    "address" : {
+      "type" : "string",
+      "validations" : {
+        "regex" : "^[A-Za-z0-9s-'.,#]+$",
+        "minCharacters" : 0,
+        "maxCharacters" : 255,
+        "dataCategory" : "Address Line",
+        "isUnique" : false,
+        "isMandatory" : true
+      }
+    },
+    "phoneNumber" : {
+      "type" : "string",
+      "validations" : { }
+    },
+    "organizationName" : {
+      "type" : "string",
+      "validations" : {
+        "minCharacters" : 0,
+        "maxCharacters" : 255,
+        "isUnique" : false,
+        "isMandatory" : true
+      }
+    },
+    "city" : {
+      "type" : "string",
+      "validations" : {
+        "regex" : "^[A-Za-zs-]+$",
+        "minCharacters" : 0,
+        "maxCharacters" : 255,
+        "dataCategory" : "City Name",
+        "isUnique" : false,
+        "isMandatory" : true
+      }
+    },
+    "state" : {
+      "type" : "string",
+      "validations" : {
+        "regex" : "^[A-Za-zs-]+$",
+        "minCharacters" : 0,
+        "maxCharacters" : 255,
+        "dataCategory" : "State Name",
+        "isUnique" : false,
+        "isMandatory" : true
+      }
+    }
+  },
+  "isApi" : false,
+  "entity" : "organization",
+  "saveScript" : [ ],
+  "referenceEntitiesOf" : { },
+  "apiScript" : [ ]
+}

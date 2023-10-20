@@ -1,0 +1,56 @@
+{
+  "uniqueColumnsOf" : {
+    "emailAddress" : true
+  },
+  "queryScript" : [ ],
+  "columns" : {
+    "lastLogin" : {
+      "type" : "date",
+      "validations" : {
+        "isAfterDate" : false,
+        "allowOnlyFutureDate" : "N",
+        "allowOnlyPastDate" : "N",
+        "isBeforeDate" : false,
+        "isMandatory" : true
+      }
+    },
+    "emailAddress" : {
+      "type" : "string",
+      "validations" : {
+        "regex" : "^[w.-]+@[w.-]+.w+$",
+        "minCharacters" : 0,
+        "maxCharacters" : 400,
+        "dataCategory" : "Email Basic",
+        "isUnique" : false,
+        "isMandatory" : true
+      }
+    },
+    "loginPassword" : {
+      "type" : "string",
+      "validations" : {
+        "regex" : "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=S+$).{5,50}$",
+        "minCharacters" : 0,
+        "maxCharacters" : 255,
+        "dataCategory" : "Strong Password",
+        "isUnique" : false,
+        "isMandatory" : true
+      }
+    },
+    "userName" : {
+      "type" : "string",
+      "validations" : {
+        "regex" : "^[a-zA-Z0-9_-]+.[a-zA-Z0-9]+$",
+        "minCharacters" : 0,
+        "maxCharacters" : 255,
+        "dataCategory" : "File Name",
+        "isUnique" : true,
+        "isMandatory" : true
+      }
+    }
+  },
+  "isApi" : false,
+  "entity" : "users",
+  "saveScript" : [ ],
+  "referenceEntitiesOf" : { },
+  "apiScript" : [ ]
+}

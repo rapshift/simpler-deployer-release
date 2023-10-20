@@ -1,0 +1,51 @@
+{
+  "uniqueColumnsOf" : {
+    "projectId" : true
+  },
+  "queryScript" : [ ],
+  "columns" : {
+    "networkScript" : {
+      "type" : "clob",
+      "validations" : {
+        "minCharacters" : 0,
+        "maxCharacters" : 500000,
+        "isUnique" : false,
+        "isMandatory" : true
+      }
+    },
+    "description" : {
+      "type" : "string",
+      "validations" : {
+        "minCharacters" : 0,
+        "maxCharacters" : 255,
+        "isUnique" : false,
+        "isMandatory" : false
+      }
+    },
+    "uiConfig" : {
+      "type" : "clob",
+      "validations" : {
+        "minCharacters" : 0,
+        "maxCharacters" : 500000,
+        "isUnique" : false,
+        "isMandatory" : true
+      }
+    },
+    "projectId" : {
+      "type" : "string",
+      "validations" : {
+        "regex" : "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+        "minCharacters" : 36,
+        "maxCharacters" : 36,
+        "dataCategory" : "UUID/GUID",
+        "isUnique" : true,
+        "isMandatory" : true
+      }
+    }
+  },
+  "isApi" : false,
+  "entity" : "deploymentNetwork",
+  "saveScript" : [ ],
+  "referenceEntitiesOf" : { },
+  "apiScript" : [ ]
+}

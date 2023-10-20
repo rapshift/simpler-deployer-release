@@ -1,0 +1,12 @@
+{
+  "id": "cc6c6669-e79a-44e7-878a-2a9313c04c1c",
+  "type": "dcMaster",
+  "children": ["034844b0-fd46-487d-b2bd-a8fa236b2fc7"],
+  "name": "core",
+  "host": "10.12.111.12",
+  "port": "1310",
+  "javaVersion": "Oracle SE 11 (LTS 2018)*",
+  "nodejsVersion": "Node 18 (Hydrogen 2022)*",
+  "pythonVersion": "3.11 (2022)*",
+  "deployrToken": "c9ad24a1-9333-47ca-83b1-7ddd2463351b"
+}

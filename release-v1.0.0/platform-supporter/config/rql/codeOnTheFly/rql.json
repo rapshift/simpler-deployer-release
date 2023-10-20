@@ -1,0 +1,22 @@
+{
+  "uniqueColumnsOf" : { },
+  "queryScript" : [ ],
+  "columns" : { },
+  "isApi" : true,
+  "entity" : "codeOnTheFly",
+  "saveScript" : [ ],
+  "referenceEntitiesOf" : { },
+  "apiScript" : [ {
+    "name" : "start",
+    "type" : "RStart",
+    "return" : "runJavaCode"
+  }, {
+    "name" : "runJavaCode",
+    "type" : "RCode.java",
+    "input" : [ "apiScript", "CodeOnTheFly.java", "$.request" ],
+    "return" : "end"
+  }, {
+    "name" : "end",
+    "type" : "REnd"
+  } ]
+}

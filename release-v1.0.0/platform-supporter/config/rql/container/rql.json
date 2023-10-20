@@ -1,0 +1,50 @@
+{
+  "uniqueColumnsOf" : {
+    "containerName" : true,
+    "projectId" : true
+  },
+  "queryScript" : [ ],
+  "columns" : {
+    "dcMasterId" : {
+      "type" : "string",
+      "validations" : {
+        "regex" : "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+        "minCharacters" : 36,
+        "maxCharacters" : 36,
+        "dataCategory" : "UUID/GUID",
+        "isUnique" : false,
+        "isMandatory" : true
+      }
+    },
+    "containerName" : {
+      "type" : "string",
+      "validations" : {
+        "maxCharacters" : 50,
+        "minCharacters" : 0,
+        "dataCategory" : "Normal Text",
+        "isUnique" : false,
+        "isMandatory" : true
+      }
+    },
+    "description" : {
+      "type" : "string",
+      "validations" : { }
+    },
+    "projectId" : {
+      "type" : "string",
+      "validations" : {
+        "regex" : "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+        "minCharacters" : 36,
+        "maxCharacters" : 36,
+        "dataCategory" : "UUID/GUID",
+        "isUnique" : false,
+        "isMandatory" : true
+      }
+    }
+  },
+  "isApi" : false,
+  "entity" : "container",
+  "saveScript" : [ ],
+  "referenceEntitiesOf" : { },
+  "apiScript" : [ ]
+}

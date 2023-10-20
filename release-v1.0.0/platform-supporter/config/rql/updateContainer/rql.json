@@ -1,0 +1,22 @@
+{
+  "uniqueColumnsOf" : { },
+  "queryScript" : [ ],
+  "columns" : { },
+  "isApi" : true,
+  "entity" : "updateContainer",
+  "saveScript" : [ ],
+  "referenceEntitiesOf" : { },
+  "apiScript" : [ {
+    "name" : "start",
+    "type" : "RStart",
+    "return" : "runJavaCode"
+  }, {
+    "name" : "runJavaCode",
+    "type" : "RCode.java",
+    "input" : [ "apiScript", "UpdateContainer.java", "$.request" ],
+    "return" : "end"
+  }, {
+    "name" : "end",
+    "type" : "REnd"
+  } ]
+}

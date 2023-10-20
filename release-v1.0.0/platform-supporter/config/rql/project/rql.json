@@ -1,0 +1,49 @@
+{
+  "uniqueColumnsOf" : {
+    "projectName" : true,
+    "userId" : true
+  },
+  "queryScript" : [ ],
+  "columns" : {
+    "organizationId" : {
+      "type" : "string",
+      "validations" : {
+        "regex" : "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+        "minCharacters" : 36,
+        "maxCharacters" : 36,
+        "dataCategory" : "UUID/GUID",
+        "isUnique" : false,
+        "isMandatory" : false
+      }
+    },
+    "description" : {
+      "type" : "string",
+      "validations" : { }
+    },
+    "projectName" : {
+      "type" : "string",
+      "validations" : {
+        "minCharacters" : 0,
+        "maxCharacters" : 255,
+        "isUnique" : false,
+        "isMandatory" : true
+      }
+    },
+    "userId" : {
+      "type" : "string",
+      "validations" : {
+        "regex" : "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+        "minCharacters" : 36,
+        "maxCharacters" : 36,
+        "dataCategory" : "UUID/GUID",
+        "isUnique" : false,
+        "isMandatory" : true
+      }
+    }
+  },
+  "isApi" : false,
+  "entity" : "project",
+  "saveScript" : [ ],
+  "referenceEntitiesOf" : { },
+  "apiScript" : [ ]
+}
